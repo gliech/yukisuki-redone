@@ -1,70 +1,98 @@
 body{
-    overflow: hidden;
+	background-color: #19191b;
+	background-image: url("");
+	overflow: hidden;
 }
+
 a {
-    color:inherit;
-    text-decoration:none;
-    line-height:25px;
-}
-
-#bgimg {
-    z-index:-10;
-    position:fixed;
-    background-size:cover;
-    background-repeat:no-repeat;
-}
-
-#container {
-    height:100vh;
-    width:100vw;
-    display:table;
-}
-#cell {
-    display:table-cell;
-    vertical-align:middle;
-    text-align:center;
+	color: inherit;
+	text-decoration: none;
+	line-height: inherit;
 }
 
 .sqr {
-    display:inline-block;
-    width:150px;
-    height:150px;
-    margin:3px 1px;
-    overflow:hidden;
-    -moz-transition:all .25s ease-in-out;
-    -webkit-transition:all .25s ease-in-out;
-    -o-transition:all .25s ease-in-out;
-    transition:all .25s ease-in-out;
-    vertical-align:middle;
+	font-family: "tewi";
+	font-size: 10px;
+	color: #8d2036;
+	background-color: #121212;
+	/*borders only visible when expanded due to main.js*/
+	border-top: 2px solid #8d2036;
+	border-bottom: 2px solid #8d2036;
+	line-height: 150px;
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	margin: 3px 1px;
+	overflow: hidden;
+	-moz-transition: none .25s ease-in-out;
+	-webkit-transition: none .25s ease-in-out;
+	-o-transition: none .25s ease-in-out;
+	transition: none .25s ease-in-out;
+	vertical-align: middle;
 }
+
 .content {
-    margin:0 10px 0;
-    line-height:25px;
+	font-family: "tewi";
+	font-size: 10px;
+	color: #999999;
+	margin: 0 10px 0;
+	line-height: 25px;
 }
-span {
-    width:inherit;
-    height:inherit;
-    line-height:150px;
-    text-transform:uppercase;
+
+#mascot {
+	background-image: url("");
+	bottom: 0px;
+	right: 0px;
+	height: 500px;
+	width: 400px;
+	opacity: .2;
+	z-index: -10;
+	position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #searchinput {
-    width:130px;
-    height:37px;
-    margin-left:-10px;
-    padding:0 10px;
-    border:none;
+/*By default the search-box will use your default system font for input boxes.
+If you want to set a different font for your search-box, uncomment (and change)
+the followins 2 lines*/
+	/*font-family: "tewi";
+	font-size: 10px;*/
+	color: #cacaca;
+	background-color: #2a2a2a;
+	width: 130px;
+	height: 37px;
+	margin-left: -10px;
+	padding: 0 10px;
+	border: none;
 }
 
 #popup {
-    position: absolute;
-    z-index: 100;
-    bottom: -200px;
-    right: 15px;
-    padding: 25px;
-    -moz-transition:all .25s ease-in-out;
-    -webkit-transition:all .25s ease-in-out;
-    -o-transition:all .25s ease-in-out;
-    transition:all .25s ease-in-out;
-    text-align:left;
+	font-family: "tewi";
+	font-size: 10px;
+	color: #999999;
+	background-color: #121212;
+	border-top: 2px solid #8d2036;
+	position: absolute;
+	z-index: 100;
+	bottom: -200px;
+	right: 15px;
+	padding: 25px;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+	text-align: left;
+}
+
+#container {
+	height: 100vh;
+	width: 100vw;
+	display: table;
+}
+
+#cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
