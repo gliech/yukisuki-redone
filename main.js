@@ -1,7 +1,7 @@
 //config
-var alwaysOpen = false;
-var randomMascots = false;
-var mascots = [
+var alwaysOpen = false; //if set to true all squares will expand on load and stay that way
+var randomMascots = false; //read 'On Background Images' in the README before changing this
+var mascots = [            //list of pictures that will be used if randomMascots is set to true
 	"mascots/jew.png",
 	"mascots/cat.png",
 	"mascots/dontdoit.jpg"];
@@ -36,7 +36,7 @@ function popup(obj){
 	if(!visibility){
 		obj.style.bottom = "0";
 	}else{
-		obj.style.bottom = popupHeight;
+		obj.style.bottom = popupDepression;
 	}
 	visibility = !visibility;
 }
@@ -151,7 +151,7 @@ window.onload = function(){
 	
 	// popup
 	popupDiv = document.getElementById("popup");
-	popupHeight = $("#popup").css("bottom");
+	popupDepression = $("#popup").css("bottom");
 	popupDiv.addEventListener("click", function(){
 		popup(popupDiv);
 	});

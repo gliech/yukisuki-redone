@@ -1,6 +1,6 @@
 body{
-	background-color: #19191b;
-	background-image: url("");
+	background-color: #19191b; /*colour of the page's background if no background image is set*/
+	background-image: url(""); /*easiest way of setting a basic background image for the page*/
 	overflow: hidden;
 }
 
@@ -11,13 +11,18 @@ a {
 }
 
 .sqr {
-	font-family: "tewi";
-	font-size: 10px;
-	color: #8d2036;
-	background-color: #121212;
-	/*borders only visible when expanded due to main.js*/
-	border-top: 2px solid #8d2036;
-	border-bottom: 2px solid #8d2036;
+	font-family: "tewi"; /*font used in the titles of squares (i.e. 4CHAN, IMAGES etc.)*/
+	font-size: 10px; /*size of the font used in the titles of squares (i.e. 4CHAN, IMAGES etc.)*/
+	color: #8d2036; /*colour of the text in the titles of squares (i.e. 4CHAN, IMAGES etc.)*/
+	background-color: #121212; /*colour of the squares*/
+	/*Borders are only visible when expanded. If you want contracted squares to have a border too, change
+	the contractedBorder variable in the advanced config section of main.js*/
+	border-top-width: 2px; /*width of the top border of expanded squares*/
+	border-bottom-width: 2px; /*width of the bottom border of expanded squares*/
+	border-top-color: #8d2036; /*colour of the top border of squares*/
+	border-bottom-color: #8d2036; /*colour of the bottom border of squares*/
+	border-top-style: solid;
+	border-bottom-style: solid;
 	line-height: 150px;
 	display: inline-block;
 	width: 150px;
@@ -32,20 +37,21 @@ a {
 }
 
 .content {
-	font-family: "tewi";
-	font-size: 10px;
-	color: #999999;
+	font-family: "tewi"; /*font used in the content of squares (not including the search input)*/
+	font-size: 10px; /*size of the font used in the content of squares (not including the search input)*/
+	color: #999999; /*colour of the text in the content of squares (not including the search input)*/
 	margin: 0 10px 0;
 	line-height: 25px;
 }
 
 #mascot {
-	background-image: url("");
-	bottom: 0px;
-	right: 0px;
+	background-image: url(""); /*If you want to have a mascot on your startpage, its image-url goes here*/
+	bottom: 0px; /*elevation of the mascots bottom edge above the bottom of the page(can also take relative values like 10%)*/
+	right: 0px; /*distance of the mascots right edge from the right side of the page(can also take relative values like 10%)*/
+	/*The following two properties should be set to the height and width of the image you use as mascot*/
 	height: 500px;
 	width: 400px;
-	opacity: .2;
+	opacity: .2; /*transparency-level of the mascot image(a value of 1 is completely opaque, a value of 0 is completely transparent)*/
 	z-index: -10;
 	position: fixed;
 	background-size: cover;
@@ -53,13 +59,12 @@ a {
 }
 
 #searchinput {
-/*By default the search-box will use your default system font for input boxes.
-If you want to set a different font for your search-box, uncomment (and change)
-the followins 2 lines*/
+/*By default the search field will use your default system font for input fields. If you want to set a
+different font for your search field, uncomment (and change) the following 2 lines*/
 	/*font-family: "tewi";
 	font-size: 10px;*/
-	color: #cacaca;
-	background-color: #2a2a2a;
+	color: #cacaca; /*colour of the text in the search field*/
+	background-color: #2a2a2a; /*colour of the search field*/
 	width: 130px;
 	height: 37px;
 	margin-left: -10px;
@@ -68,14 +73,16 @@ the followins 2 lines*/
 }
 
 #popup {
-	font-family: "tewi";
-	font-size: 10px;
-	color: #999999;
-	background-color: #121212;
-	border-top: 2px solid #8d2036;
+	font-family: "tewi"; /*font used in the help pop-up*/
+	font-size: 10px; /*size of the font used in the help pop-up*/
+	color: #999999; /*colour of the text in the help pop-up*/
+	background-color: #121212; /*colour of the help pop-up*/
+	border-top-width: 2px; /*width of the border at the top of the help pop-up*/
+	border-top-color: #8d2036; /*colour of the border at the top of the help pop-up*/
+	border-top-style: solid;
 	position: absolute;
 	z-index: 100;
-	bottom: -200px;
+	bottom: -200px; /*You may want to further decrease this value if you add more lines to the help pop-up*/
 	right: 15px;
 	padding: 25px;
 	-moz-transition: all .25s ease-in-out;
