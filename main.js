@@ -5,6 +5,10 @@ var mascots = [
 	"mascots/jew.png",
 	"mascots/cat.png",
 	"mascots/dontdoit.jpg"];
+//advanced config
+var contractedBorder = "0px";
+var squareHeightMultiplierExpanded = 2;
+var squareHeightMultiplierAlwayOpen = 1.5;
 
 
 //variables
@@ -43,7 +47,7 @@ function expand(){
 	this.style.borderTopWidth = bdrTop;
 	this.style.borderBottomWidth = bdrBtm;
 	this.style.height = 
-		2 * squareHeight +
+		squareHeightMultiplierExpanded * squareHeight +
 		this.contentHeight +
 		"px";
 }
@@ -51,8 +55,8 @@ function expand(){
 
 function contract(){
 	this.style.height = squareHeight + "px";
-	this.style.borderTopWidth = "0px";
-	this.style.borderBottomWidth = "0px";
+	this.style.borderTopWidth = contractedBorder;
+	this.style.borderBottomWidth = contractedBorder;
 }
 
 
@@ -123,8 +127,8 @@ window.onload = function(){
 	bdrTop = square.css("border-top-width");
 	bdrBtm = square.css("border-bottom-width");
 	if(!alwaysOpen){
-		square.css("border-top-width", "0px");
-		square.css("border-bottom-width", "0px");
+		square.css("border-top-width", contractedBorder);
+		square.css("border-bottom-width", contractedBorder);
 	}
 	if(square.css("transition-property") == "none"){ //don't ask
 		square.css("-moz-transition-property", "all");
@@ -196,7 +200,7 @@ window.onload = function(){
 		}
 		for(var i = 0; i < sqr.length; ++i){
 			sqr[i].style.height = 
-				1.5 * squareHeight + 
+				squareHeightMultiplierAlwayOpen * squareHeight + 
 				maxContentHeight + 
 				"px";
 		}
